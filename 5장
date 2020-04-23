@@ -1,0 +1,16 @@
+5. 무작위 사각형 생성
+PGraphics pg; PGraphics<---형식의 pg변수 선언
+void setup(){
+  size(800,800);
+  pg = createGraphics(800,800);
+  rectMode(CENTER);
+}
+void draw(){    
+  pg.beginDraw(); <---그리기 시작                               
+  if(mousePressed){   <---마우스를 누를 시에                                                                    
+    pg.fill(random(0,255),random(0,255),random(0,255));   <---무작위로 숫자를 지정해서
+    pg.rect(mouseX,mouseY,30,30); <---마우스에 위치에 따라 사각형 생성
+  }
+  pg.endDraw(); <---그리기 끝마침
+  image(pg,0,0);
+}
