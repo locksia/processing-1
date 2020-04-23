@@ -5,23 +5,13 @@ size(500,500);
 rectMode(CENTER);
 }
 int a;
-
 void draw(){
-
 translate(mouseX, mouseY);
-
 scale( sin(a) + 1);
-
 rotate(a);
-
 a = a+0.1;
-
 fill(0,0,255);
-
 rect(0,0,80,80);
-
 fill(0,255,0);
-
 ellipse(0,0,80,80);
-
 }
