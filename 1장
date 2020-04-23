@@ -1,4 +1,4 @@
-1.도형의 이동,회전,
+1.도형의 이동,회전,크기조절
 
 void setup(){
 size(500,500);
@@ -6,12 +6,12 @@ rectMode(CENTER);
 }
 int a;
 void draw(){
-translate(mouseX, mouseY);
-scale( sin(a) + 1);
-rotate(a);
+translate(mouseX, mouseY);<---도형의 이동
+scale( sin(a) + 1);<---도형의 크기조절
+rotate(a);<---도형의 회전
 a = a+0.1;
 fill(0,0,255);
-rect(0,0,80,80);
+rect(0,0,80,80);<---사각형 만들기
 fill(0,255,0);
-ellipse(0,0,80,80);
+ellipse(0,0,80,80);<---원 만들기
 }
