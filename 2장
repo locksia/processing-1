@@ -2,17 +2,17 @@
 
 void setup() {
 size(800, 300);
-textSize(200);
+textSize(50);
 }
-int i, dir=1, sp=1;
+int i,a=1;
 void draw() {
 fill(0);
 background(255,255,0);
-text("andong", i, 200);
-if(i>width) dir=-1;
-if(i<0) dir=1;
-i = i+dir*sp;
+text("andong",i=i+a,150);<---배너 생성,가로 위치가 계속 증가
+if(i>800){<---끝까지 가면 다시 처음부터 시작
+    i=0;
+   }
 }
-void keyPressed(){
-sp = key-'0'; // 0, 1, 2... 9가 됨
+void keyPressed(){<---키보드에서 숫자 입력
+a = key-'0';
 }
